@@ -1,7 +1,7 @@
 import http from "http";
 import BrowserToRtmpServer from "@api.video/browser-to-rtmp-server";
 
-const PORT = process.env.port || 1234;
+const PORT = process.env.PORT || 1234;
 const server = http.createServer();
 
 const browserToRtmpServer = new BrowserToRtmpServer(server, {
