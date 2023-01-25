@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn tsc",
     "dev": "yarn nodemon ./src/index.ts",
-    "start": "node .dist/index.js"
+    "start": "node ./dist/index.js"
   },
   "author": "",
   "license": "ISC",
