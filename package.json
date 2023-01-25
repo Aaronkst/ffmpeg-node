@@ -4,7 +4,9 @@
   "description": "Middleware server for livestream",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn nodemon ./src/index.ts"
+    "build": "yarn tsc",
+    "dev": "yarn nodemon ./src/index.ts",
+    "start": "node .dist/index.js"
   },
   "author": "",
   "license": "ISC",
