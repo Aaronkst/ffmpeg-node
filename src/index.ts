@@ -28,5 +28,9 @@ browserToRtmpServer.on("error", (uuid, error) => {
   console.log(`Error for connection ${uuid}: ${error.message}`);
 });
 
+browserToRtmpServer.on("connection", (c) => {
+  console.log(`New connection uuid: ${c.uuid}`);
+});
+
 server.listen(PORT);
 console.log("[Start] - App Started, Port:", PORT);
