@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
 const browserToRtmpServer = new BrowserToRtmpServer(server, {
   socketio: {
     cors: {
-      origin: ["http://localhost:3000"],
+      origin: "*",
       methods: ["GET", "POST"],
       credentials: true,
     },
