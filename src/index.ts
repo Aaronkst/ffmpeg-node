@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
 const browserToRtmpServer = new BrowserToRtmpServer(server, {
   socketio: {
     cors: {
-      origin: "*",
+      origin: ["http://localhost:3000"],
       methods: ["GET", "POST"],
     },
     transports: ["websocket", "polling"],
@@ -26,7 +26,6 @@ const browserToRtmpServer = new BrowserToRtmpServer(server, {
   },
   hooks: {
     start: (socket, config) => {
-      console.log(socket);
       // for instance, you can here access the socket associated to the current request:
       // const token = socket.handshake.auth.token; // retrieve the auth token
       // ...
