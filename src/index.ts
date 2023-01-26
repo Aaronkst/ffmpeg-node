@@ -3,18 +3,16 @@ import BrowserToRtmpServer from "@api.video/browser-to-rtmp-server";
 
 const PORT = process.env.PORT || 1234;
 const server = http.createServer((req, res) => {
-  if (req.method === "GET") {
-    // 1. Tell the browser everything is OK (Status code 200), and the data is in plain text
-    res.writeHead(200, {
-      "Content-Type": "text/plain",
-    });
-
-    // 2. Write the announced text to the body of the page
-    res.write("Hello, World!\n");
-
-    // 3. Tell the server that all of the response headers and body have been sent
-    res.end();
-  }
+  // if (req.method === "GET") {
+  //   // 1. Tell the browser everything is OK (Status code 200), and the data is in plain text
+  //   res.writeHead(200, {
+  //     "Content-Type": "text/plain",
+  //   });
+  //   // 2. Write the announced text to the body of the page
+  //   res.write("Hello, World!\n");
+  //   // 3. Tell the server that all of the response headers and body have been sent
+  //   res.end();
+  // }
 });
 
 const browserToRtmpServer = new BrowserToRtmpServer(server, {
