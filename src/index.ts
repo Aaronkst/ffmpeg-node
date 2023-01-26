@@ -22,7 +22,8 @@ const browserToRtmpServer = new BrowserToRtmpServer(server, {
       methods: ["GET", "POST"],
       // credentials: true,
     },
-    transports: ["polling", "websocket"],
+    // transports: ["polling", "websocket"],
+    path: "/",
     allowEIO3: true,
   },
   hooks: {
