@@ -23,9 +23,12 @@ const browserToRtmpServer = new BrowserToRtmpServer(server, {
       origin: "*",
       methods: ["GET", "POST"],
     },
+    transports: ["websocket"],
+    allowEIO3: true,
   },
   hooks: {
     start: (socket, config) => {
+      console.log(socket);
       // for instance, you can here access the socket associated to the current request:
       // const token = socket.handshake.auth.token; // retrieve the auth token
       // ...
