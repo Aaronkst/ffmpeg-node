@@ -1,7 +1,7 @@
 import http from "http";
 import BrowserToRtmpServer from "@api.video/browser-to-rtmp-server";
 
-const PORT = process.env.PORT || 1234;
+const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
   // if (req.method === "GET") {
   //   // 1. Tell the browser everything is OK (Status code 200), and the data is in plain text
